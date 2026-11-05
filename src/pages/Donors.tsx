@@ -50,10 +50,10 @@ export function Donors() {
 
       {loading ? (
         <p className="text-center text-slate-500">Memuat daftar donatur...</p>
+      ) : failed ? (
+        <p className="text-center text-slate-500">Gagal memuat data donatur. Pastikan Sheet sudah dipublikasikan dengan benar.</p>
       ) : sorted.length === 0 ? (
-        <p className="text-center text-slate-500">
-          {failed ? 'Daftar donatur belum bisa dimuat. Coba lagi nanti.' : 'Belum ada donatur. Jadilah yang pertama!'}
-        </p>
+        <p className="text-center text-slate-500">Belum ada donatur. Jadilah yang pertama!</p>
       ) : (
         <>
           {/* Podium top 3 */}

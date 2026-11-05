@@ -9,12 +9,13 @@ import { Crown, Medal } from 'lucide-react';
 export function Vote() {
   const [voters, setVoters] = useState<Voter[]>([]);
   const [loading, setLoading] = useState(true);
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
     let alive = true;
     fetchVotersFromSheet('/api/sheet?type=voters')
       .then((list) => { if (alive) setVoters(list); })
-      .catch(console.error)
+      .catch(() => { if (alive) setFailed(true); })
       .finally(() => { if (alive) setLoading(false); });
     return () => { alive = false; };
   }, []);
@@ -75,6 +76,8 @@ export function Vote() {
 
         {loading ? (
           <p className="text-center text-slate-500">Memuat daftar voter...</p>
+        ) : failed ? (
+          <p className="text-center text-slate-500">Gagal memuat data voter. Pastikan Sheet sudah dipublikasikan dengan benar.</p>
         ) : sortedVoters.length === 0 ? (
           <p className="text-center text-slate-500">Belum ada voter. Jadilah yang pertama!</p>
         ) : (
