@@ -133,14 +133,14 @@ export function Home() {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6">
             {[
-              { emoji: "🛒", label: "Shop System" },
-              { emoji: "🎰", label: "Gacha" },
-              { emoji: "🏆", label: "Leaderboard" },
-              { emoji: "🌎", label: "Custom World" },
-              { emoji: "🪙", label: "CoinFlip" },
-              { emoji: "🎟️", label: "Battle Pass" },
-              { emoji: "🎁", label: "Daily Rewards" },
-              { emoji: "⚡", label: "Dan masih banyak lagi!" },
+              { img: '/icons/shop.webp', label: "Shop System" },
+              { img: '/icons/gacha.webp', label: "Gacha" },
+              { img: '/icons/trophy.webp', label: "Leaderboard" },
+              { img: '/icons/world.webp', label: "Custom World" },
+              { img: '/icons/coin.webp', label: "CoinFlip" },
+              { img: '/icons/banner.webp', label: "Battle Pass" },
+              { img: '/icons/clock.webp', label: "Daily Rewards" },
+              { img: '/icons/mystery-box.webp', label: "Dan masih banyak lagi!" },
             ].map((item, i) => (
               <m.div
                 key={i}
@@ -150,7 +150,7 @@ export function Home() {
                 transition={{ delay: i * 0.05 }}
                 className="flex flex-col items-center justify-center p-4 rounded-xl bg-[#1f1f23] border border-[#2a2a30] hover:border-emerald-500/30 transition-colors"
               >
-                <span className="text-3xl mb-2">{item.emoji}</span>
+                <img src={item.img} alt="" width={56} height={56} loading="lazy" draggable={false} className="w-14 h-14 object-contain mb-2" />
                 <span className="text-sm font-medium text-slate-300 text-center">{item.label}</span>
               </m.div>
             ))}
