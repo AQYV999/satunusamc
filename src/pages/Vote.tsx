@@ -1,22 +1,21 @@
 import { useEffect, useState } from 'react';
 import { VOTE_SITES } from '../data/votes';
-import { TOP_VOTERS, type Voter } from '../data/voters';
+import { type Voter } from '../data/voters';
 import { fetchVotersFromSheet } from '../lib/votersSheet';
-import { SITE } from '../config/site';
 import { TiltCard } from '../components/TiltCard';
 import { SpringButton } from '../components/SpringButton';
 import { Crown, Medal } from 'lucide-react';
 
 export function Vote() {
-  const [voters, setVoters] = useState<Voter[]>(SITE.votersSheetUrl ? [] : TOP_VOTERS);
+  const [voters, setVoters] = useState<Voter[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!SITE.votersSheetUrl) return;
     let alive = true;
-    fetchVotersFromSheet(SITE.votersSheetUrl)
+    fetchVotersFromSheet('/api/sheet?type=voters')
       .then((list) => { if (alive) setVoters(list); })
       .catch(console.error)
-      .finally(() => { });
+      .finally(() => { if (alive) setLoading(false); });
     return () => { alive = false; };
   }, []);
 
@@ -74,9 +73,14 @@ export function Vote() {
           <p className="text-slate-400 text-sm">Pemain yang paling rajin mendukung server bulan ini.</p>
         </div>
 
-        <div className="card !p-0 overflow-hidden">
-          <div className="divide-y divide-white/5">
-            {sortedVoters.map((voter, index) => (
+        {loading ? (
+          <p className="text-center text-slate-500">Memuat daftar voter...</p>
+        ) : sortedVoters.length === 0 ? (
+          <p className="text-center text-slate-500">Belum ada voter. Jadilah yang pertama!</p>
+        ) : (
+          <div className="card !p-0 overflow-hidden">
+            <div className="divide-y divide-white/5">
+              {sortedVoters.map((voter, index) => (
               <div key={voter.id} className="flex items-center gap-4 px-5 py-4 hover:bg-white/[0.02] transition-colors">
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0 ${
                   index === 0 ? 'bg-yellow-400/20 text-yellow-400' : 
@@ -107,6 +111,7 @@ export function Vote() {
             ))}
           </div>
         </div>
+      )}
       </div>
     </div>
   );

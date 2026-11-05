@@ -15,8 +15,6 @@ export const SITE = {
   whatsappNumber: '6285333181671',
   supportEmail: 'support@satunusamc.id',
   footerCopyright: '© 2026 SatuNusaMC. Seluruh hak dilindungi.',
-  donorsSheetUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ2HCLiMmkNTdyczgue3C7Gh9bCHaQ3DwVbIOxuDsba3rQFg2iiCT2mKs6F5ttVlgmx13rHjMRSvhcr/pub?output=csv&gid=0',
-  votersSheetUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ2HCLiMmkNTdyczgue3C7Gh9bCHaQ3DwVbIOxuDsba3rQFg2iiCT2mKs6F5ttVlgmx13rHjMRSvhcr/pub?output=csv&gid=354557413',
 } as const;
 
 const PLACEHOLDER_WHATSAPP = '628123456789';

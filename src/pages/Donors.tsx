@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import { m } from 'framer-motion';
 import { Crown, Heart } from 'lucide-react';
-import { DONORS, type Donor } from '../data/donors';
+import { type Donor } from '../data/donors';
 import { fetchDonorsFromSheet } from '../lib/donorsSheet';
-import { SITE } from '../config/site';
 import { skinHead } from '../data/staff';
 import { SpringButton } from '../components/SpringButton';
 
@@ -20,14 +19,13 @@ const PODIUM = [
 ];
 
 export function Donors() {
-  const [donors, setDonors] = useState<Donor[]>(SITE.donorsSheetUrl ? [] : DONORS);
-  const [loading, setLoading] = useState(Boolean(SITE.donorsSheetUrl));
+  const [donors, setDonors] = useState<Donor[]>([]);
+  const [loading, setLoading] = useState(true);
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
-    if (!SITE.donorsSheetUrl) return;
     let alive = true;
-    fetchDonorsFromSheet(SITE.donorsSheetUrl)
+    fetchDonorsFromSheet('/api/sheet?type=donors')
       .then((list) => { if (alive) setDonors(list); })
       .catch(() => { if (alive) setFailed(true); })
       .finally(() => { if (alive) setLoading(false); });
