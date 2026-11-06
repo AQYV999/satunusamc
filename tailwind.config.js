@@ -4,10 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#09090b',
-        surface: '#111113',
-        line: '#1f1f23',
-        accent: '#10b981',
+        ink: '#030201',
+        surface: '#13100C',
+        line: '#090705',
+        accent: '#DAAD46',
+        'accent-bright': '#F4CC64',
       },
       fontFamily: {
         sans: ['Outfit', 'system-ui', 'sans-serif'],
