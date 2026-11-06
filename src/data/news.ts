@@ -7,30 +7,30 @@ export type NewsItem = {
   content?: string;
 };
 
-// Placeholder content — owner dapat mengedit / menambahkan berita di sini
+// Berita terbaru di urutan paling atas
 export const NEWS: NewsItem[] = [
   {
-    id: 'server-launch',
-    title: 'Peluncuran Server Resmi',
+    id: 'maintenance-migrasi-hosting',
+    title: 'Maintenance: Migrasi Hosting',
+    date: '6 November 2026',
+    category: 'Maintenance',
+    description: 'Server sedang menjalani migrasi hosting. Mohon tunggu — perkembangan terbaru diumumkan di grup.',
+    content: 'SatuNusaMC sedang melakukan MAINTENANCE MIGRASI HOSTING. Selama proses ini, server bisa jadi tidak bisa diakses untuk sementara. Migrasi ini supaya server lebih stabil dan nyaman dimainkan. Pantau grup untuk info kapan server sudah kembali online. Terima kasih atas pengertiannya!',
+  },
+  {
+    id: 'fix-bug-bedrock',
+    title: 'Fix Bug Bedrock: Kini Bisa Join Lagi!',
+    date: '31 Oktober 2026',
+    category: 'Perbaikan',
+    description: 'Bedrock kini sudah bisa join kembali seperti biasa. Mohon maaf atas ketidaknyamanannya.',
+    content: '🔧 Fix Bug Bedrock — Bedrock kini sudah bisa join kembali seperti biasa! Mohon maaf atas ketidaknyamanannya. Sebelumnya terdapat kendala akibat pembaruan sistem Bedrock yang memengaruhi koneksi ke server. Sekarang sudah normal kembali — silakan langsung tes masuk!',
+  },
+  {
+    id: 'ip-baru-bedrock-sementara',
+    title: 'IP Baru Sementara untuk Player Bedrock',
     date: '31 Oktober 2026',
     category: 'Pengumuman',
-    description: 'Server SatuNusaMC resmi diluncurkan. Bergabunglah sekarang dan rasakan pengalaman bermain yang nyaman.',
-    content: 'Kami dengan bangga mengumumkan peluncuran resmi server SatuNusaMC. Terima kasih kepada semua komunitas yang telah mendukung.',
-  },
-  {
-    id: 'update-1-21',
-    title: 'Update ke Minecraft 1.21',
-    date: '25 Oktober 2026',
-    category: 'Update',
-    description: 'Server telah diupdate ke versi Minecraft 1.21 dengan fitur terbaru.',
-    content: 'Versi Minecraft 1.21 kini tersedia di server kami. Coba fitur trial chamber dan lainnya.',
-  },
-  {
-    id: 'maintenance',
-    title: 'Jadwal Maintenance Mingguan',
-    date: '20 Oktober 2026',
-    category: 'Maintenance',
-    description: 'Maintenance rutin akan dilakukan setiap hari Sabtu pukul 02.00 WIB.',
-    content: 'Mohon maaf atas ketidaknyamanan. Server akan kembali online secepatnya setelah maintenance selesai.',
+    description: 'Untuk sementara, player Bedrock login pakai IP berikut: lovelace.nexuscloud.id Port 13378.',
+    content: 'Untuk sementara, player Bedrock pakai IP ini:\nIP: lovelace.nexuscloud.id\nPORT: 13378\nSimpan alamat ini, dan pantau pengumuman berikutnya kalau IP sudah kembali ke alamat utama.',
   },
 ];
