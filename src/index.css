@@ -127,6 +127,28 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(-2px);
 }
 
+/* ---------- Discord Buttons ---------- */
+.btn-discord {
+  background: linear-gradient(135deg, #6B75F5 0%, #5865F2 60%, #4752C4 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 22px rgba(88, 101, 242, 0.35);
+}
+.btn-discord:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 36px rgba(88, 101, 242, 0.55);
+}
+.btn-discord-outline {
+  background: rgba(88, 101, 242, 0.08);
+  border: 1px solid rgba(88, 101, 242, 0.45);
+  color: #BCC2FF;
+  box-shadow: 0 4px 22px rgba(88, 101, 242, 0.15);
+}
+.btn-discord-outline:hover {
+  background: rgba(88, 101, 242, 0.16);
+  border-color: rgba(88, 101, 242, 0.7);
+  transform: translateY(-2px) scale(1.02);
+}
+
 .btn-sky {
   background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
   color: #05202e;

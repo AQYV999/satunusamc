@@ -15,6 +15,7 @@ export const SITE = {
   whatsappNumber: '6285333181671',
   supportEmail: 'support@satunusamc.id',
   footerCopyright: '© 2026 SatuNusaMC. Seluruh hak dilindungi.',
+  discordInvite: 'https://discord.gg/cc6qUm2C44',
 } as const;
 
 const PLACEHOLDER_WHATSAPP = '628123456789';

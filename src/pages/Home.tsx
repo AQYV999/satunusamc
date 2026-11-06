@@ -6,6 +6,7 @@ import { NEWS } from '../data/news';
 import { GALLERY } from '../data/gallery';
 import { HeroVideo } from '../components/HeroVideo';
 import { ZoomIn } from 'lucide-react';
+import { DiscordIcon } from '../components/icons/DiscordIcon';
 import { Lightbox } from '../components/Lightbox';
 import { FloatingParticles } from '../components/FloatingParticles';
 import { SpringButton } from '../components/SpringButton';
@@ -84,6 +85,14 @@ export function Home() {
                     <SpringButton to="/store" className="w-full sm:w-auto">
                       Mulai Petualangan
                     </SpringButton>
+                    <a
+                      href={SITE.discordInvite}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-discord-outline inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold"
+                    >
+                      <DiscordIcon className="h-5 w-5" /> Gabung Discord
+                    </a>
                     <CopyButton label="Salin IP" />
                   </div>
 

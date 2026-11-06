@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SITE, NAVIGATION } from '../config/site';
+import { DiscordIcon } from '../components/icons/DiscordIcon';
 
 export function Footer() {
   return (
@@ -30,6 +31,9 @@ export function Footer() {
           <h4 className="text-white font-semibold mb-4 font-display">Hubungi Kami</h4>
           <p className="text-sm text-slate-400 mb-2">Email: {SITE.supportEmail}</p>
           <p className="text-sm text-slate-400">WhatsApp: <a href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:underline">SatuNusaMC</a></p>
+          <a href={SITE.discordInvite} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-2 text-sm text-[#BCC2FF] hover:text-white transition-colors">
+            <DiscordIcon className="h-4 w-4" /> Discord
+          </a>
         </div>
       </div>
       <div className="border-t border-[#1f1f23] py-6 text-center text-xs text-slate-500">

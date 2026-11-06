@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { SITE, NAVIGATION } from '../config/site';
 import { Menu, X } from 'lucide-react';
+import { DiscordIcon } from '../components/icons/DiscordIcon';
 import { AnimatePresence, m, useScroll, useMotionValueEvent } from 'framer-motion';
 
 export function Navbar() {
@@ -70,6 +71,14 @@ export function Navbar() {
           <Link to="/store" className="btn btn-primary text-sm py-2.5 px-5">
             Beli Rank
           </Link>
+          <a
+            href={SITE.discordInvite}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-discord text-sm py-2.5 px-5 inline-flex items-center gap-2"
+          >
+            <DiscordIcon className="h-4 w-4" /> Discord
+          </a>
         </div>
         
         <button
@@ -102,6 +111,15 @@ export function Navbar() {
             <Link to="/store" onClick={() => setIsOpen(false)} className="btn btn-primary text-center mt-2">
               Beli Rank
             </Link>
+            <a
+              href={SITE.discordInvite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-discord text-center mt-2 inline-flex items-center justify-center gap-2"
+              onClick={() => setIsOpen(false)}
+            >
+              <DiscordIcon className="h-4 w-4" /> Discord
+            </a>
           </m.div>
         )}
       </AnimatePresence>
