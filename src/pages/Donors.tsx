@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import type { CSSProperties } from 'react';
 import { m } from 'framer-motion';
-import { Crown, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import { type Donor } from '../data/donors';
 import { fetchDonorsFromSheet } from '../lib/donorsSheet';
 import { skinHead } from '../data/staff';
@@ -12,12 +12,6 @@ const SHOW_AMOUNT = true;
 
 const rupiah = (n: number) =>
   new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(n);
-
-const PODIUM = [
-  { order: 'md:order-2', text: 'text-yellow-300', border: 'border-yellow-400/60', glow: 'rgba(250,204,21,0.16)', size: 'w-28 h-28' },
-  { order: 'md:order-1', text: 'text-slate-200',  border: 'border-slate-300/50',  glow: 'rgba(203,213,225,0.12)', size: 'w-24 h-24' },
-  { order: 'md:order-3', text: 'text-amber-500',  border: 'border-amber-600/50',  glow: 'rgba(217,119,6,0.14)',   size: 'w-24 h-24' },
-];
 
 export function Donors() {
   const [donors, setDonors] = useState<Donor[]>([]);
