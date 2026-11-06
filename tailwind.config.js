@@ -4,11 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#030201',
-        surface: '#13100C',
-        line: '#090705',
-        accent: '#DAAD46',
-        'accent-bright': '#F4CC64',
+        ink: '#030201',          // Background utama (Gallery Deep)
+        surface: '#13100C',      // Kartu (Gallery Panel)
+        line: '#2A231A',         // Border gelap keemasan
+        accent: '#DAAD46',       // Gilt (Emas Utama)
+        
+        // TRIK SULAP: Menimpa warna emerald agar semua teks & bg otomatis jadi emas
+        emerald: {
+          400: '#F4CC64', // Gilt Bright (Teks & Ikon)
+          500: '#DAAD46', // Gilt (Background Tombol)
+          600: '#C99B33', // Dark Gold (Hover & Border)
+          900: '#2A231A', // Deep Gold (Background tipis)
+        }
       },
       fontFamily: {
         sans: ['Outfit', 'system-ui', 'sans-serif'],
