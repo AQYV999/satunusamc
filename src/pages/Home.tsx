@@ -304,6 +304,15 @@ export function Home() {
                   <SpringButton href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                     Join WhatsApp
                   </SpringButton>
+                  <a
+                    href={SITE.discordInvite}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-discord inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold w-full sm:w-auto"
+                  >
+                    <DiscordIcon className="h-5 w-5" />
+                    Gabung Discord
+                  </a>
                   <SpringButton href={SITE.whatsappNumber ? `https://wa.me/${SITE.whatsappNumber}` : '#'} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                     WhatsApp Admin
                   </SpringButton>

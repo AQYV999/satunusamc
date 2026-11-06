@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ChevronDown, MessageCircle, Phone } from 'lucide-react';
 import { SITE } from '../config/site';
 import { isWhatsAppConfigured, isWhatsAppUrlConfigured } from '../config/site';
+import { DiscordIcon } from '../components/icons/DiscordIcon';
 import { DiscordButton } from '../components/DiscordButton';
 import { WhatsAppButton } from '../components/WhatsAppButton';
 
@@ -37,6 +38,15 @@ export function Support() {
 
       {/* Contact Buttons */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href={SITE.discordInvite}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-discord inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold w-full sm:w-auto"
+        >
+          <DiscordIcon className="h-5 w-5" />
+          Gabung Discord
+        </a>
         {isWhatsAppUrlConfigured() ? (
           <DiscordButton />
         ) : (

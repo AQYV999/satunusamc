@@ -67,7 +67,7 @@ export function Navbar() {
           })}
         </div>
         
-        <div className="hidden md:block">
+        <div className="hidden md:block flex items-center gap-3">
           <Link to="/store" className="btn btn-primary text-sm py-2.5 px-5">
             Beli Rank
           </Link>
