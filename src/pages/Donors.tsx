@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import type { CSSProperties } from 'react';
 import { m } from 'framer-motion';
 import { Crown, Heart } from 'lucide-react';
 import { type Donor } from '../data/donors';
@@ -36,6 +37,13 @@ export function Donors() {
   const top = sorted.slice(0, 3);
   const rest = sorted.slice(3);
 
+  const podiumOrder = [top[1], top[0], top[2]].filter(Boolean);
+  const rankStyles: Record<string | number, { rank: string; color: string; textColor: string; label: string }> = {
+    [top[0]?.id ?? '']: { rank: 'rank-1', color: '#facc15', textColor: 'text-yellow-400', label: '#1' },
+    [top[1]?.id ?? '']: { rank: 'rank-2', color: '#cbd5e1', textColor: 'text-slate-300', label: '#2' },
+    [top[2]?.id ?? '']: { rank: 'rank-3', color: '#d97706', textColor: 'text-amber-500', label: '#3' },
+  };
+
   return (
     <div className="max-w-5xl mx-auto px-4 py-20 space-y-14">
       <div className="text-center max-w-2xl mx-auto space-y-4">
@@ -57,39 +65,45 @@ export function Donors() {
       ) : (
         <>
           {/* Podium top 3 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
-            {top.map((d, i) => {
-              const s = PODIUM[i];
+          <div className="podium-container">
+            {podiumOrder.map((d) => {
+              const style = rankStyles[d.id];
               const name = d.anonymous ? 'Anonim' : d.name;
               const ign = d.anonymous ? 'MHF_Question' : d.ign;
+
               return (
                 <m.div
                   key={d.id}
-                  className={s.order}
-                  initial={{ opacity: 0, y: 24 }}
+                  className={`podium-card ${style.rank}`}
+                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: 0.6, type: 'spring', bounce: 0.4 }}
+                  style={{ '--solid': style.color } as CSSProperties}
                 >
-                  <div
-                    className="card-flat relative p-6 text-center space-y-3 overflow-hidden"
-                    style={{ backgroundImage: `radial-gradient(120% 60% at 50% 0%, ${s.glow}, transparent 65%)` }}
-                  >
-                    <div className={`flex items-center justify-center gap-1.5 font-extrabold tracking-widest text-sm ${s.text}`}>
-                      {i === 0 && <Crown className="w-4 h-4" />}
-                      #{i + 1}
-                    </div>
-                    <div className={`mx-auto ${s.size} rounded-2xl bg-black overflow-hidden border-2 ${s.border}`}>
-                      <img
-                        src={skinHead(ign)}
-                        alt={`Skin ${name}`}
-                        loading="lazy"
-                        draggable={false}
-                        className="w-full h-full object-cover [image-rendering:pixelated]"
-                      />
-                    </div>
-                    <h2 className="font-display text-xl font-bold uppercase tracking-wide text-white">{name}</h2>
-                    {SHOW_AMOUNT && <p className={`font-extrabold ${s.text}`}>{rupiah(d.amount)}</p>}
+                  {/* Panggung 3D */}
+                  <div className={`podium-base ${style.rank} absolute bottom-0 w-full`} />
+
+                  {/* Avatar Skin */}
+                  <div className="podium-avatar relative">
+                    <img
+                      src={skinHead(ign, 128)}
+                      alt={name}
+                      className="w-full h-full object-cover [image-rendering:pixelated]"
+                    />
+                  </div>
+
+                  {/* Teks di atas panggung */}
+                  <div className="podium-text">
+                    <h3 className={`font-display text-xl font-bold uppercase tracking-wider ${style.textColor}`}>
+                      {style.label}
+                    </h3>
+                    <p className="text-white font-bold text-sm md:text-base truncate px-2">{name}</p>
+                    {SHOW_AMOUNT && (
+                      <p className={`text-xs md:text-sm font-mono font-bold ${style.textColor}`}>
+                        Rp {d.amount.toLocaleString('id-ID')}
+                      </p>
+                    )}
                   </div>
                 </m.div>
               );
