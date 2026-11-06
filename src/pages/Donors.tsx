@@ -1,17 +1,12 @@
 import { useEffect, useState } from 'react';
-import type { CSSProperties } from 'react';
 import { m } from 'framer-motion';
-import { Heart } from 'lucide-react';
+import { Heart, Crown } from 'lucide-react';
 import { type Donor } from '../data/donors';
-import { fetchDonorsFromSheet } from '../lib/donorsSheet';
 import { skinHead } from '../data/staff';
 import { SpringButton } from '../components/SpringButton';
 
-// Ubah ke false kalau nominal donasi tidak ingin ditampilkan
 const SHOW_AMOUNT = true;
-
-const rupiah = (n: number) =>
-  new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(n);
+const rupiah = (n: number) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(n);
 
 export function Donors() {
   const [donors, setDonors] = useState<Donor[]>([]);
@@ -19,12 +14,19 @@ export function Donors() {
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
-    let alive = true;
-    fetchDonorsFromSheet('/api/sheet?type=donors')
-      .then((list) => { if (alive) setDonors(list); })
-      .catch(() => { if (alive) setFailed(true); })
-      .finally(() => { if (alive) setLoading(false); });
-    return () => { alive = false; };
+    const fetchData = async () => {
+      try {
+        const res = await fetch('/api/sheet?type=donors');
+        if (!res.ok) throw new Error('Gagal');
+        const data = await res.json();
+        setDonors(data);
+      } catch (err) {
+        setFailed(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
   }, []);
 
   const sorted = [...donors].sort((a, b) => b.amount - a.amount);
@@ -32,10 +34,10 @@ export function Donors() {
   const rest = sorted.slice(3);
 
   const podiumOrder = [top[1], top[0], top[2]].filter(Boolean);
-  const rankStyles: Record<string | number, { rank: string; color: string; textColor: string; label: string }> = {
-    [top[0]?.id ?? '']: { rank: 'rank-1', color: '#facc15', textColor: 'text-yellow-400', label: '#1' },
-    [top[1]?.id ?? '']: { rank: 'rank-2', color: '#cbd5e1', textColor: 'text-slate-300', label: '#2' },
-    [top[2]?.id ?? '']: { rank: 'rank-3', color: '#d97706', textColor: 'text-amber-500', label: '#3' },
+  const rankStyles: Record<string | number, { color: string; bg: string; label: string }> = {
+    [top[0]?.id ?? '']: { color: '#facc15', bg: 'rgba(250,204,21,0.15)', label: '#1' },
+    [top[1]?.id ?? '']: { color: '#cbd5e1', bg: 'rgba(203,213,225,0.1)', label: '#2' },
+    [top[2]?.id ?? '']: { color: '#d97706', bg: 'rgba(217,119,6,0.15)', label: '#3' },
   };
 
   return (
@@ -53,49 +55,65 @@ export function Donors() {
       {loading ? (
         <p className="text-center text-slate-500">Memuat daftar donatur...</p>
       ) : failed ? (
-        <p className="text-center text-slate-500">Gagal memuat data donatur. Pastikan Sheet sudah dipublikasikan dengan benar.</p>
+        <p className="text-center text-slate-500">Gagal memuat data donatur. Pastikan Sheet sudah dipublikasikan.</p>
       ) : sorted.length === 0 ? (
         <p className="text-center text-slate-500">Belum ada donatur. Jadilah yang pertama!</p>
       ) : (
         <>
           {/* Podium top 3 */}
-          <div className="podium-container">
-            {podiumOrder.map((d) => {
+          <div className="flex items-end justify-center gap-2 md:gap-6 min-h-[350px] pt-16 pb-10">
+            {podiumOrder.map((d, index) => {
               const style = rankStyles[d.id];
+              const isFirst = d.id === top[0]?.id;
+              const isSecond = d.id === top[1]?.id;
+              
+              const heightClass = isFirst ? 'h-48' : isSecond ? 'h-36' : 'h-28';
+              const avatarSize = isFirst ? 'w-28 h-28 md:w-32 md:h-32' : 'w-20 h-20 md:w-24 md:h-24';
+              
               const name = d.anonymous ? 'Anonim' : d.name;
               const ign = d.anonymous ? 'MHF_Question' : d.ign;
 
               return (
                 <m.div
                   key={d.id}
-                  className={`podium-card ${style.rank}`}
+                  className="flex flex-col items-center relative w-28 md:w-40"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, type: 'spring', bounce: 0.4 }}
-                  style={{ '--solid': style.color } as CSSProperties}
+                  transition={{ duration: 0.6, delay: index * 0.1, type: 'spring' }}
                 >
-                  {/* Panggung 3D */}
-                  <div className={`podium-base ${style.rank} absolute bottom-0 w-full`} />
-
-                  {/* Avatar Skin */}
-                  <div className="podium-avatar relative">
+                  {/* Avatar Skin (menimpa panggung) */}
+                  <div 
+                    className={`relative z-10 ${avatarSize} rounded-2xl bg-[#111] border-[3px] mb-[-2rem] shadow-2xl flex items-center justify-center`}
+                    style={{ borderColor: style.color, boxShadow: `0 10px 30px -10px ${style.color}` }}
+                  >
+                    {isFirst && (
+                      <Crown className="absolute -top-8 w-10 h-10 text-yellow-400 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)] animate-float z-20" />
+                    )}
                     <img
                       src={skinHead(ign, 128)}
                       alt={name}
-                      className="w-full h-full object-cover [image-rendering:pixelated]"
+                      className="w-full h-full object-cover rounded-xl [image-rendering:pixelated]"
                     />
                   </div>
 
-                  {/* Teks di atas panggung */}
-                  <div className="podium-text">
-                    <h3 className={`font-display text-xl font-bold uppercase tracking-wider ${style.textColor}`}>
+                  {/* Panggung / Alas */}
+                  <div 
+                    className={`w-full ${heightClass} rounded-t-xl flex flex-col items-center justify-start pt-10 pb-4 relative overflow-hidden border-t-2`}
+                    style={{ 
+                      background: `linear-gradient(180deg, ${style.bg} 0%, #09090b 100%)`,
+                      borderColor: style.color 
+                    }}
+                  >
+                    <div className="absolute top-0 w-full h-[2px]" style={{ backgroundColor: style.color }} />
+                    
+                    <h3 className="font-display text-2xl md:text-3xl font-extrabold mb-1" style={{ color: style.color }}>
                       {style.label}
                     </h3>
-                    <p className="text-white font-bold text-sm md:text-base truncate px-2">{name}</p>
+                    <p className="text-white font-bold text-xs md:text-sm truncate w-full text-center px-1">{name}</p>
                     {SHOW_AMOUNT && (
-                      <p className={`text-xs md:text-sm font-mono font-bold ${style.textColor}`}>
-                        Rp {d.amount.toLocaleString('id-ID')}
+                      <p className="text-[10px] md:text-xs font-mono font-bold mt-1" style={{ color: style.color }}>
+                        {rupiah(d.amount)}
                       </p>
                     )}
                   </div>
