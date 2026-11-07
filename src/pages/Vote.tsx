@@ -4,7 +4,7 @@ import { type Voter } from '../data/voters';
 import { fetchVotersFromSheet } from '../lib/votersSheet';
 import { TiltCard } from '../components/TiltCard';
 import { SpringButton } from '../components/SpringButton';
-import { Crown, Medal } from 'lucide-react';
+import { Medal } from 'lucide-react';
 
 export function Vote() {
   const [voters, setVoters] = useState<Voter[]>([]);
@@ -68,7 +68,7 @@ export function Vote() {
       <div className="mt-20 max-w-3xl mx-auto">
         <div className="text-center mb-8 space-y-2">
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/10 mb-2">
-            <Crown className="w-6 h-6 text-emerald-400" aria-hidden="true" />
+            <img src="/icons/crown-custom.webp" alt="Crown" className="w-7 h-7 object-contain" aria-hidden="true" />
           </div>
           <h2 className="text-3xl font-extrabold text-white">Top Voters</h2>
           <p className="text-slate-400 text-sm">Pemain yang paling rajin mendukung server bulan ini.</p>
@@ -91,7 +91,7 @@ export function Vote() {
                   index === 2 ? 'bg-amber-600/20 text-amber-500' : 
                   'text-slate-500 bg-transparent'
                 }`}>
-                  {index === 0 ? <Crown className="w-4 h-4" aria-hidden="true" /> : 
+                  {index === 0 ? <img src="/icons/crown-custom.webp" alt="Crown" className="w-5 h-5 object-contain" aria-hidden="true" /> : 
                    index === 1 || index === 2 ? <Medal className="w-4 h-4" aria-hidden="true" /> : 
                    `#${index + 1}`}
                 </div>
