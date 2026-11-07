@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { m, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronDown, MessageCircle, Phone } from 'lucide-react';
-import { SITE } from '../config/site';
-import { isWhatsAppConfigured, isWhatsAppUrlConfigured, whatsappLink } from '../config/site';
+import { SITE, isWhatsAppConfigured, isWhatsAppUrlConfigured, whatsappLink } from '../config/site';
 import { DiscordIcon } from '../components/icons/DiscordIcon';
 
 const faqs: { q: string; a: React.ReactNode }[] = [
@@ -52,38 +51,28 @@ export function Support() {
         ) : (
           <button
             className="btn w-full sm:w-auto"
-            style={{
-              border: '2px dashed #27272a',
-              color: '#71717a',
-              cursor: 'not-allowed',
-              background: 'rgba(255,255,255,0.03)',
-            }}
+            style={{ border: '2px dashed #2A231A', color: '#71717a', cursor: 'not-allowed', background: 'rgba(255,255,255,0.03)' }}
             disabled
           >
-            <MessageCircle className="w-5 h-5" /> WhatsApp (Belum dikonfigurasi)
+            <MessageCircle className="w-5 h-5" /> WhatsApp Grup (Belum dikonfigurasi)
           </button>
         )}
         {isWhatsAppConfigured() ? (
           <a
-            href={whatsappLink(`Halo, saya ingin membeli rank ROOKIE di ${SITE.name}. Mohon info pembayaran.`)}
+            href={whatsappLink('Halo admin SatuNusaMC, saya butuh bantuan.')}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary"
+            className="btn btn-secondary inline-flex items-center justify-center gap-2 w-full sm:w-auto"
           >
-            Beli Rank
+            <Phone className="w-5 h-5" /> Chat Admin
           </a>
         ) : (
           <button
             className="btn w-full sm:w-auto"
-            style={{
-              border: '2px dashed #27272a',
-              color: '#71717a',
-              cursor: 'not-allowed',
-              background: 'rgba(255,255,255,0.03)',
-            }}
+            style={{ border: '2px dashed #2A231A', color: '#71717a', cursor: 'not-allowed', background: 'rgba(255,255,255,0.03)' }}
             disabled
           >
-            <Phone className="w-5 h-5" /> WhatsApp (Belum dikonfigurasi)
+            <Phone className="w-5 h-5" /> Chat Admin (Belum dikonfigurasi)
           </button>
         )}
       </div>

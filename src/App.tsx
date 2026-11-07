@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 import { AnimatePresence, m } from 'framer-motion';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -7,16 +7,18 @@ import { RouteEffects } from './components/RouteEffects';
 import { ScrollUI } from './components/ScrollUI';
 import { PageLoader } from './components/PageLoader';
 import { Home } from './pages/Home';
-import { Store } from './pages/Store';
-import { Vote } from './pages/Vote';
-import { Rules } from './pages/Rules';
-import { News } from './pages/News';
-import { Staff } from './pages/Staff';
-import { Support } from './pages/Support';
-import { Wiki } from './pages/Wiki';
-import { Donors } from './pages/Donors';
-import { NotFound } from './pages/NotFound';
 import { AnnouncementBar } from './components/AnnouncementBar';
+
+const Store = lazy(() => import('./pages/Store').then((m) => ({ default: m.Store })));
+const Vote = lazy(() => import('./pages/Vote').then((m) => ({ default: m.Vote })));
+const Rules = lazy(() => import('./pages/Rules').then((m) => ({ default: m.Rules })));
+const News = lazy(() => import('./pages/News').then((m) => ({ default: m.News })));
+const Staff = lazy(() => import('./pages/Staff').then((m) => ({ default: m.Staff })));
+const Support = lazy(() => import('./pages/Support').then((m) => ({ default: m.Support })));
+const Wiki = lazy(() => import('./pages/Wiki').then((m) => ({ default: m.Wiki })));
+const Donors = lazy(() => import('./pages/Donors').then((m) => ({ default: m.Donors })));
+const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
+
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -26,7 +28,7 @@ const AnimatedRoutes = () => {
         key={location.pathname}
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -8 }}
+        exit={{ opacity: 0, y: -4 }}
         transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
       >
         <Routes location={location}>
@@ -45,6 +47,7 @@ const AnimatedRoutes = () => {
     </AnimatePresence>
   );
 };
+
 
 export default function App() {
   return (
