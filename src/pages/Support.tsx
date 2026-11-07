@@ -3,10 +3,8 @@ import { m, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronDown, MessageCircle, Phone } from 'lucide-react';
 import { SITE } from '../config/site';
-import { isWhatsAppConfigured, isWhatsAppUrlConfigured } from '../config/site';
+import { isWhatsAppConfigured, isWhatsAppUrlConfigured, whatsappLink } from '../config/site';
 import { DiscordIcon } from '../components/icons/DiscordIcon';
-import { DiscordButton } from '../components/DiscordButton';
-import { WhatsAppButton } from '../components/WhatsAppButton';
 
 const faqs: { q: string; a: React.ReactNode }[] = [
   {
@@ -48,7 +46,9 @@ export function Support() {
           Gabung Discord
         </a>
         {isWhatsAppUrlConfigured() ? (
-          <DiscordButton />
+          <a href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-sky">
+            Gabung WhatsApp
+          </a>
         ) : (
           <button
             className="btn w-full sm:w-auto"
@@ -64,7 +64,14 @@ export function Support() {
           </button>
         )}
         {isWhatsAppConfigured() ? (
-          <WhatsAppButton rankName="ROOKIE" />
+          <a
+            href={whatsappLink(`Halo, saya ingin membeli rank ROOKIE di ${SITE.name}. Mohon info pembayaran.`)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
+            Beli Rank
+          </a>
         ) : (
           <button
             className="btn w-full sm:w-auto"
