@@ -35,7 +35,7 @@ export function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
         scrolled 
           ? 'bg-black/60 backdrop-blur-xl border-white/10 shadow-lg' 
-          : 'bg-[#09090b]/80 backdrop-blur-md border-[#1f1f23]'
+          : 'bg-[#030201]/80 backdrop-blur-md border-[#2A231A]'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
@@ -43,7 +43,7 @@ export function Navbar() {
           <img
             src="/logo.jpg"
             alt="SatuNusaMC Logo"
-            className="w-10 h-10 rounded-xl object-cover shadow-[0_0_20px_rgba(16,185,129,0.4)] animate-float"
+            className="w-10 h-10 rounded-xl object-cover shadow-[0_0_20px_rgba(218,173,70,0.4)] animate-float"
             loading="eager"
           />
           <span className="text-xl font-bold font-display text-white tracking-tight">{SITE.name}</span>
@@ -58,7 +58,7 @@ export function Navbar() {
                 to={item.href}
                 aria-current={active ? 'page' : undefined}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  active ? 'bg-emerald-500/15 text-emerald-400 font-semibold shadow-[0_0_15px_rgba(16,185,129,0.15)]' : 'text-slate-400 hover:text-white hover:bg-white/5'
+                  active ? 'bg-emerald-500/15 text-emerald-400 font-semibold shadow-[0_0_15px_rgba(218,173,70,0.18)]' : 'text-slate-400 hover:text-white hover:bg-white/5'
                 }`}
               >
                 {item.name}
@@ -101,7 +101,7 @@ export function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden bg-[#111113] border-b border-[#1f1f23] px-4 py-6 flex flex-col gap-3 overflow-hidden"
+            className="md:hidden bg-[#13100C] border-b border-[#2A231A] px-4 py-6 flex flex-col gap-3 overflow-hidden"
           >
             {NAVIGATION.map((item) => (
               <Link key={item.name} to={item.href} onClick={() => setIsOpen(false)} className={`py-3 px-4 rounded-xl text-base font-medium ${location.pathname === item.href ? 'bg-emerald-500/15 text-emerald-400' : 'text-slate-400'}`}>

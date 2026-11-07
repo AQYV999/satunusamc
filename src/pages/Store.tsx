@@ -80,7 +80,7 @@ export function Store() {
       {/* Dekorasi latar */}
       <div className="absolute inset-0 bg-grid opacity-25 pointer-events-none" />
       <div className="blob absolute -top-24 left-1/2 -translate-x-1/2 w-[640px] h-[640px] rounded-full bg-emerald-500/15 blur-[120px] pointer-events-none" />
-      <div className="blob absolute top-1/3 -right-40 w-[420px] h-[420px] rounded-full bg-sky-500/10 blur-[110px] pointer-events-none" style={{ animationDelay: '-4s' }} />
+      <div className="blob absolute top-1/3 -right-40 w-[420px] h-[420px] rounded-full bg-emerald-400/10 blur-[110px] pointer-events-none" style={{ animationDelay: '-4s' }} />
 
       <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-24 space-y-24">
         <div className="-mb-12">

@@ -59,7 +59,7 @@ export function Home() {
                 <HeroVideo />
                 {/* Thin dark overlay for text readability */}
                 <div className="absolute inset-0 bg-black/40" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#030201] via-transparent to-transparent" />
               </div>
 
               {/* Hero Content - centered, minimalist */}
