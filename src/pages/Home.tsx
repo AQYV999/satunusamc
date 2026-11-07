@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { m } from 'framer-motion';
 import { SITE } from '../config/site';
+import { RANKS } from '../data/ranks';
 import { NEWS } from '../data/news';
 import { GALLERY } from '../data/gallery';
 import { HeroVideo } from '../components/HeroVideo';
@@ -37,12 +38,6 @@ const GAMEPLAY_SYSTEMS = [
   { img: '/icons/campfire.webp', title: "Player & Community Activities", desc: "Nikmati berbagai fasilitas tambahan, termasuk tutorial, informasi server, rules, serta sistem pendukung aktivitas pemain." },
 ];
 
-const RANKS = [
-  { name: 'ROOKIE', color: 'text-gray-400', desc: 'Mulai perjalananmu dan nikmati pengalaman Survival dengan perlengkapan tambahan yang tersedia.' },
-  { name: 'KNIGHT', color: 'text-blue-400', desc: 'Tingkatkan perjalananmu dengan akses ke kit rank Knight.' },
-  { name: 'LORD', color: 'text-purple-400', desc: 'Dapatkan pengalaman bermain dengan kit rank Lord dan berbagai keuntungan sesuai benefit yang tersedia.' },
-  { name: 'ETERNAL', color: 'text-emerald-400', desc: 'Pilihan rank tertinggi untuk pemain yang ingin menikmati keuntungan eksklusif sesuai fasilitas yang tersedia.' },
-];
 
 export function Home() {
   const [active, setActive] = useState<number | null>(null);
@@ -281,8 +276,8 @@ export function Home() {
               transition={{ delay: i * 0.1 }}
               className="card text-center hover:-translate-y-2 transition-transform duration-300"
             >
-              <h3 className={`text-2xl font-bold ${rank.color} mb-2`}>{rank.name}</h3>
-              <p className="text-sm text-slate-400">{rank.desc}</p>
+              <h3 className={`text-2xl font-bold ${rank.theme.text} mb-2`}>{rank.name}</h3>
+              <p className="text-sm text-slate-400">{rank.description}</p>
             </m.div>
           ))}
         </div>

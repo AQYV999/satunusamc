@@ -16,6 +16,7 @@ import { Support } from './pages/Support';
 import { Wiki } from './pages/Wiki';
 import { Donors } from './pages/Donors';
 import { NotFound } from './pages/NotFound';
+import { AnnouncementBar } from './components/AnnouncementBar';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -54,6 +55,7 @@ export default function App() {
       <div className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--foreground)]">
         <Navbar />
         <main id="main-content" tabIndex={-1} className="flex-1 mt-20 focus:outline-none">
+          <AnnouncementBar />
           <Suspense fallback={<PageLoader />}>
             <AnimatedRoutes />
           </Suspense>

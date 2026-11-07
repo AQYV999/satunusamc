@@ -1,3 +1,5 @@
+import { SITE } from '../config/site';
+
 export type WikiSection = {
   id: string;
   title: string;
@@ -26,11 +28,11 @@ export const WIKI: WikiSection[] = [
     items: [
       {
         title: 'Java Edition',
-        content: 'Buka Minecraft Launcher, pilih Multiplayer, lalu tambahkan server dengan alamat play.satunusamc.id.',
+        content: `Buka Minecraft Launcher, pilih Multiplayer, lalu tambahkan server dengan alamat ${SITE.ip}.`,
       },
       {
         title: 'Bedrock Edition',
-        content: 'Buka Minecraft Bedrock, pilih Servers, tambahkan server baru dengan alamat dan port yang tersedia.',
+        content: `Buka Minecraft Bedrock, pilih Servers, tambahkan server baru dengan alamat ${SITE.ip} dan port ${SITE.bedrockPort}.`,
       },
     ],
   },

@@ -16,7 +16,23 @@ export const SITE = {
   supportEmail: 'support@satunusamc.id',
   footerCopyright: '© 2026 SatuNusaMC. Seluruh hak dilindungi.',
   discordInvite: 'https://discord.gg/cc6qUm2C44',
-} as const;
+  } as const;
+
+/** Banner pengumuman global. Set enabled: false untuk mematikan.
+ *  Ganti `id` setiap pengumuman baru supaya banner muncul lagi untuk yang sudah menutupnya. */
+export const ANNOUNCEMENT: {
+  enabled: boolean;
+  id: string;
+  text: string;
+  href?: string;
+  label?: string;
+} = {
+  enabled: true,
+  id: 'maintenance-migrasi-hosting',
+  text: 'Maintenance migrasi hosting sedang berlangsung. Server bisa tidak dapat diakses sementara.',
+  href: '/news',
+  label: 'Selengkapnya',
+};
 
 const PLACEHOLDER_WHATSAPP = '628123456789';
 const PLACEHOLDER_WHATSAPP_URL = 'https://chat.whatsapp.com/xxxxxxxxxxxxxxxx';
