@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { m } from 'framer-motion';
-import { Heart, Crown } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import { type Donor } from '../data/donors';
 import { fetchDonorsFromSheet } from '../lib/donorsSheet';
 import { skinHead } from '../data/staff';
@@ -89,7 +89,11 @@ export function Donors() {
                     style={{ borderColor: style.color, boxShadow: `0 10px 30px -10px ${style.color}` }}
                   >
                     {isFirst && (
-                      <Crown className="absolute -top-8 w-10 h-10 text-yellow-400 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)] animate-float z-20" />
+                      <img 
+                        src="/icons/crown-custom.webp" 
+                        alt="Crown" 
+                        className="absolute -top-8 w-12 h-12 object-contain drop-shadow-[0_0_12px_rgba(250,204,21,0.8)] animate-float z-20" 
+                      />
                     )}
                     <img
                       src={skinHead(ign, 128)}
