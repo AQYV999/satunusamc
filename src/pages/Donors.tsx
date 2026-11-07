@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { m } from 'framer-motion';
 import { Heart, Crown } from 'lucide-react';
 import { type Donor } from '../data/donors';
+import { fetchDonorsFromSheet } from '../lib/donorsSheet';
 import { skinHead } from '../data/staff';
 import { SpringButton } from '../components/SpringButton';
 
@@ -14,19 +15,19 @@ export function Donors() {
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch('/api/sheet?type=donors');
-        if (!res.ok) throw new Error('Gagal');
-        const data = await res.json();
-        setDonors(data);
-      } catch (err) {
-        setFailed(true);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
+    let alive = true;
+    fetchDonorsFromSheet('/api/sheet?type=donors')
+      .then((data) => {
+        if (alive) setDonors(data);
+      })
+      .catch(() => {
+        if (alive) setFailed(true);
+      })
+      .finally(() => {
+        if (alive) setLoading(false);
+      });
+
+    return () => { alive = false; };
   }, []);
 
   const sorted = [...donors].sort((a, b) => b.amount - a.amount);
