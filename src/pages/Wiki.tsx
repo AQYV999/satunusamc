@@ -10,7 +10,7 @@ export function Wiki() {
       <div className="space-y-10">
         {WIKI.map((section) => (
           <div key={section.id} className="card space-y-6">
-            <h2 className="text-2xl font-bold text-emerald-400 border-b border-[#1f1f23] pb-3">
+            <h2 className="text-2xl font-bold text-emerald-400 border-b border-[#2A231A] pb-3">
               {section.title}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

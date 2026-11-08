@@ -27,7 +27,7 @@ export function ScrollUI() {
     <>
       {/* Progress bar */}
       <m.div
-        className="fixed top-0 left-0 right-0 h-1 z-[60] bg-gradient-to-r from-emerald-600 to-emerald-400"
+        className="fixed top-0 left-0 right-0 h-1 z-[60] bg-gradient-to-r from-emerald-500 to-emerald-400"
         style={{ transformOrigin: '0%', scaleX }}
       />
 

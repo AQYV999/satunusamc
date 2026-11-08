@@ -45,8 +45,8 @@ a { text-decoration: none; color: inherit; }
 .bg-ornament {
   background-image:
     radial-gradient(ellipse 70% 50% at 50% -10%, rgba(218, 173, 70, 0.12), transparent 70%),
-    radial-gradient(ellipse 50% 40% at 90% 20%, rgba(244, 204, 100, 0.05), transparent 70%),
-    radial-gradient(ellipse 60% 45% at 0% 100%, rgba(201, 155, 51, 0.05), transparent 70%);
+    radial-gradient(ellipse 50% 40% at 90% 20%, rgba(218, 173, 70, 0.05), transparent 70%),
+    radial-gradient(ellipse 60% 45% at 0% 100%, rgba(120, 90, 40, 0.06), transparent 70%);
   background-attachment: fixed;
 }
 
@@ -63,7 +63,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ---------- Cards ---------- */
 .card {
-  background: linear-gradient(180deg, rgba(19, 16, 12, 0.92), rgba(11, 9, 6, 0.92));
+  background: linear-gradient(180deg, rgba(19, 16, 12, 0.92), rgba(12, 10, 7, 0.92));
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.5rem;
@@ -178,7 +178,7 @@ a { text-decoration: none; color: inherit; }
   position: relative;
   width: 100%;
   border-radius: 12px;
-  background: linear-gradient(180deg, #1f1f23 0%, #111113 100%);
+  background: linear-gradient(180deg, #2A231A 0%, #13100C 100%);
   border: 1px solid rgba(255,255,255,0.05);
   border-top: 3px solid var(--solid);
   box-shadow: 
@@ -190,9 +190,9 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* Tinggi panggung berbeda untuk Juara 1, 2, 3 */
-.podium-base.rank-1 { height: 140px; background: linear-gradient(180deg, #2a2414 0%, #111113 100%); }
-.podium-base.rank-2 { height: 90px; background: linear-gradient(180deg, #1f2328 0%, #111113 100%); }
-.podium-base.rank-3 { height: 70px; background: linear-gradient(180deg, #2a1c14 0%, #111113 100%); }
+.podium-base.rank-1 { height: 140px; background: linear-gradient(180deg, #2a2414 0%, #13100C 100%); }
+.podium-base.rank-2 { height: 90px; background: linear-gradient(180deg, #1f2328 0%, #13100C 100%); }
+.podium-base.rank-3 { height: 70px; background: linear-gradient(180deg, #2a1c14 0%, #13100C 100%); }
 
 /* Skin Kepala melayang di atas panggung */
 .podium-avatar {
@@ -255,8 +255,8 @@ a { text-decoration: none; color: inherit; }
 
 .btn-disabled {
   background: rgba(255, 255, 255, 0.03);
-  color: #71717a;
-  border-color: #27272a;
+  color: #7D7466;
+  border-color: #2A231A;
   cursor: not-allowed;
 }
 
@@ -391,7 +391,7 @@ a { text-decoration: none; color: inherit; }
 ::-webkit-scrollbar { width: 9px; }
 ::-webkit-scrollbar-track { background: #030201; }
 ::-webkit-scrollbar-thumb { background: #2A231A; border-radius: 5px; }
-::-webkit-scrollbar-thumb:hover { background: #4A3D28; }
+::-webkit-scrollbar-thumb:hover { background: rgba(218,173,70,0.5); }
 
 ::selection { background: var(--accent); color: #1A140B; }
 
@@ -519,7 +519,7 @@ a { text-decoration: none; color: inherit; }
 }
 .hazard-inner {
   border-radius: 16px;
-  background: linear-gradient(180deg, #0f0f12, #09090b);
+  background: linear-gradient(180deg, #14100A, #080604);
   padding: 1.5rem 1.25rem;
   text-align: center;
 }

@@ -20,7 +20,7 @@ export function CopyChip({ label, display, copyValue }: Props) {
       type="button"
       onClick={copy}
       aria-label={`Salin alamat ${label}`}
-      className="flex flex-col items-center justify-center bg-[#1f1f23] border border-[#2a2a30] rounded-lg px-3 py-1.5 w-full sm:w-auto min-w-[140px] cursor-pointer transition-colors hover:border-emerald-500/50"
+      className="flex flex-col items-center justify-center bg-[#1A150F] border border-[#2A231A] rounded-lg px-3 py-1.5 w-full sm:w-auto min-w-[140px] cursor-pointer transition-colors hover:border-emerald-500/50"
     >
       <p className={`text-[9px] sm:text-[10px] uppercase tracking-wider mb-0.5 ${copied ? 'text-emerald-400' : 'text-slate-400'}`}>
         {copied ? 'Tersalin!' : label}

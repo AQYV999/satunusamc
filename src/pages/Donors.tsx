@@ -85,7 +85,7 @@ export function Donors() {
                 >
                   {/* Avatar Skin (menimpa panggung) */}
                   <div 
-                    className={`relative z-10 ${avatarSize} rounded-2xl bg-[#111] border-[3px] mb-[-2rem] shadow-2xl flex items-center justify-center`}
+                    className={`relative z-10 ${avatarSize} rounded-2xl bg-[#13100C] border-[3px] mb-[-2rem] shadow-2xl flex items-center justify-center`}
                     style={{ borderColor: style.color, boxShadow: `0 10px 30px -10px ${style.color}` }}
                   >
                     {isFirst && (
@@ -106,7 +106,7 @@ export function Donors() {
                   <div 
                     className={`w-full ${heightClass} rounded-t-xl flex flex-col items-center justify-start pt-10 pb-4 relative overflow-hidden border-t-2`}
                     style={{ 
-                      background: `linear-gradient(180deg, ${style.bg} 0%, #09090b 100%)`,
+                      background: `linear-gradient(180deg, ${style.bg} 0%, #080604 100%)`,
                       borderColor: style.color 
                     }}
                   >
@@ -136,7 +136,7 @@ export function Donors() {
                 return (
                   <div key={d.id} className="flex items-center gap-4 px-5 py-3.5 hover:bg-white/[0.02] transition-colors">
                     <span className="w-8 text-center text-sm font-bold text-slate-500">#{i + 4}</span>
-                    <div className="w-10 h-10 rounded-lg bg-black overflow-hidden border border-[#27272a] shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-black overflow-hidden border border-[#2A231A] shrink-0">
                       <img
                         src={skinHead(ign, 64)}
                         alt=""

@@ -49,7 +49,7 @@ export function Navbar() {
           <span className="text-xl font-bold font-display text-white tracking-tight">{SITE.name}</span>
         </Link>
         
-        <div className="hidden md:flex items-center gap-1 bg-[#111113]/80 p-1.5 rounded-full border border-[#1f1f23]">
+        <div className="hidden md:flex items-center gap-1 bg-[#13100C]/80 p-1.5 rounded-full border border-[#2A231A]">
           {NAVIGATION.map((item) => {
             const active = location.pathname === item.href;
             return (

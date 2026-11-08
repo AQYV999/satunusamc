@@ -152,7 +152,7 @@ export function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="flex flex-col items-center justify-center p-4 rounded-xl bg-[#1f1f23] border border-[#2a2a30] hover:border-emerald-500/30 transition-colors"
+                className="flex flex-col items-center justify-center p-4 rounded-xl bg-[#1A150F] border border-[#2A231A] hover:border-emerald-500/30 transition-colors"
               >
                 <img src={item.img} alt="" width={56} height={56} loading="lazy" draggable={false} className="w-14 h-14 object-contain mb-2" />
                 <span className="text-sm font-medium text-slate-300 text-center">{item.label}</span>
@@ -179,7 +179,7 @@ export function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="group relative aspect-[3/4] overflow-hidden rounded-2xl border border-[#1f1f23] bg-[#111113] text-left cursor-zoom-in transition-all duration-300 hover:border-emerald-500/50 hover:shadow-[0_18px_44px_rgba(0,0,0,0.55)]"
+              className="group relative aspect-[3/4] overflow-hidden rounded-2xl border border-[#2A231A] bg-[#13100C] text-left cursor-zoom-in transition-all duration-300 hover:border-emerald-500/50 hover:shadow-[0_18px_44px_rgba(0,0,0,0.55)]"
             >
               <img
                 src={item.src}

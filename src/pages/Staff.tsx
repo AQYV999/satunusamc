@@ -2,7 +2,7 @@ import { STAFF, skinHead } from '../data/staff';
 
 const ROLE_STYLE: Record<string, string> = {
   Owner: 'bg-amber-500/10 text-amber-300 border-amber-500/25',
-  Developer: 'bg-sky-500/10 text-sky-300 border-sky-500/25',
+  Developer: 'bg-violet-500/10 text-violet-300 border-violet-500/25',
 };
 const DEFAULT_ROLE_STYLE = 'bg-emerald-500/10 text-emerald-300 border-emerald-500/25';
 
@@ -23,7 +23,7 @@ export function Staff() {
             className="card-flat group p-5 flex flex-col items-center text-center gap-3
                        w-[calc(50%-0.625rem)] sm:w-[calc(33.333%-0.84rem)] lg:w-[calc(20%-1rem)]"
           >
-            <div className="w-20 h-20 rounded-xl bg-black overflow-hidden border border-[#27272a] group-hover:border-emerald-500/50 transition-colors">
+            <div className="w-20 h-20 rounded-xl bg-black overflow-hidden border border-[#2A231A] group-hover:border-emerald-500/50 transition-colors">
               <img
                 src={skinHead(m.ign)}
                 alt={`Skin ${m.username}`}

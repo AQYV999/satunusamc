@@ -51,7 +51,7 @@ export function Support() {
         ) : (
           <button
             className="btn w-full sm:w-auto"
-            style={{ border: '2px dashed #2A231A', color: '#71717a', cursor: 'not-allowed', background: 'rgba(255,255,255,0.03)' }}
+            style={{ border: '2px dashed #2A231A', color: '#7D7466', cursor: 'not-allowed', background: 'rgba(255,255,255,0.03)' }}
             disabled
           >
             <MessageCircle className="w-5 h-5" /> WhatsApp Grup (Belum dikonfigurasi)
@@ -69,7 +69,7 @@ export function Support() {
         ) : (
           <button
             className="btn w-full sm:w-auto"
-            style={{ border: '2px dashed #2A231A', color: '#71717a', cursor: 'not-allowed', background: 'rgba(255,255,255,0.03)' }}
+            style={{ border: '2px dashed #2A231A', color: '#7D7466', cursor: 'not-allowed', background: 'rgba(255,255,255,0.03)' }}
             disabled
           >
             <Phone className="w-5 h-5" /> Chat Admin (Belum dikonfigurasi)

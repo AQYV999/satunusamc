@@ -39,7 +39,7 @@ export function Vote() {
                 </div>
               )}
             </div>
-            <div className="pt-6 mt-6 border-t border-[#1f1f23]">
+            <div className="pt-6 mt-6 border-t border-[#2A231A]">
               {site.url !== '#' ? (
                 <SpringButton
                   href={site.url}
@@ -96,7 +96,7 @@ export function Vote() {
                    `#${index + 1}`}
                 </div>
                 
-                <div className="w-10 h-10 rounded-lg bg-black overflow-hidden border border-[#27272a] shrink-0 hidden sm:block">
+                <div className="w-10 h-10 rounded-lg bg-black overflow-hidden border border-[#2A231A] shrink-0 hidden sm:block">
                   <img 
                     src={`https://mc-heads.net/avatar/${encodeURIComponent(voter.name)}/64`} 
                     alt={`Skin ${voter.name}`}
