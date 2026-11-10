@@ -3,9 +3,9 @@ import { m } from 'framer-motion';
 import { Check, Copy } from 'lucide-react';
 import { SITE } from '../config/site';
 
-type Props = { label?: string };
+type Props = { label?: string; className?: string };
 
-export function CopyButton({ label = 'Salin IP' }: Props) {
+export function CopyButton({ label = 'Salin IP', className = '' }: Props) {
   const [copied, setCopied] = useState(false);
   
   const handleCopy = async () => {
@@ -38,7 +38,7 @@ export function CopyButton({ label = 'Salin IP' }: Props) {
       whileTap={{ scale: 0.95 }}
       animate={copied ? { scale: [1, 1.08, 1] } : {}}
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="btn btn-secondary w-full sm:w-auto relative overflow-hidden group"
+      className={`btn btn-secondary w-full sm:w-auto relative overflow-hidden group ${className}`}
       aria-live="polite"
       aria-label={copied ? `IP tersalin ke clipboard: ${SITE.ip}` : `${label}: ${SITE.ip}`}
     >

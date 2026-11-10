@@ -1,0 +1,315 @@
+- generic [ref=f7e2]:
+  - link "Langsung ke konten utama" [ref=f7e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=f7e4]:
+    - navigation [ref=f7e5]:
+      - generic [ref=f7e6]:
+        - link "SatuNusaMC Logo SatuNusaMC" [ref=f7e7] [cursor=pointer]:
+          - /url: /
+          - img "SatuNusaMC Logo" [ref=f7e8]
+          - generic [ref=f7e9]: SatuNusaMC
+        - generic [ref=f7e10]:
+          - link "Home" [ref=f7e11] [cursor=pointer]:
+            - /url: /
+          - link "Store" [ref=f7e12] [cursor=pointer]:
+            - /url: /store
+          - link "Vote" [ref=f7e13] [cursor=pointer]:
+            - /url: /vote
+          - link "Donatur" [ref=f7e14] [cursor=pointer]:
+            - /url: /donatur
+          - link "Rules" [ref=f7e15] [cursor=pointer]:
+            - /url: /rules
+          - link "News" [ref=f7e16] [cursor=pointer]:
+            - /url: /news
+          - link "Staff" [ref=f7e17] [cursor=pointer]:
+            - /url: /staff
+          - link "Support" [ref=f7e18] [cursor=pointer]:
+            - /url: /support
+          - link "Wiki" [ref=f7e19] [cursor=pointer]:
+            - /url: /wiki
+        - generic [ref=f7e20]:
+          - link "Beli Rank" [ref=f7e21] [cursor=pointer]:
+            - /url: /store
+          - link "Discord" [ref=f7e22] [cursor=pointer]:
+            - /url: https://discord.gg/cc6qUm2C44
+    - main [active] [ref=f7e25]:
+      - status [ref=f7e26]:
+        - generic [ref=f7e27]:
+          - paragraph [ref=f7e31]:
+            - text: Maintenance migrasi hosting sedang berlangsung. Server bisa tidak dapat diakses sementara.
+            - link "Selengkapnya" [ref=f7e32] [cursor=pointer]:
+              - /url: /news
+          - button "Tutup pengumuman" [ref=f7e33] [cursor=pointer]
+      - generic [ref=f7e38]:
+        - generic [ref=f7e45]:
+          - status "Memeriksa…, Java & Bedrock" [ref=f7e46]:
+            - generic [ref=f7e49]: Memeriksa…
+            - generic [ref=f7e51]: Java & Bedrock
+          - heading "Your Adventure, Your World, Your Story." [level=1] [ref=f7e52]: Your Adventure,Your World, Your Story.
+          - paragraph [ref=f7e53]: Server Minecraft Indonesia yang minimalis, stabil, dan ramah komunitas. Main bareng, bangun bareng, tumbuh bareng.
+          - generic [ref=f7e54]:
+            - link "Mulai Petualangan" [ref=f7e55] [cursor=pointer]:
+              - /url: /store
+            - link "Gabung Discord" [ref=f7e57] [cursor=pointer]:
+              - /url: https://discord.gg/cc6qUm2C44
+            - 'button "Salin IP: play.satunusa.my.id" [ref=f7e60] [cursor=pointer]':
+              - generic [ref=f7e64]: Salin IP
+              - generic [ref=f7e65]: play.satunusa.my.id
+          - generic [ref=f7e66]:
+            - button "Salin alamat Java" [ref=f7e67] [cursor=pointer]:
+              - paragraph [ref=f7e68]: Java
+              - paragraph [ref=f7e69]: play.satunusa.my.id
+            - button "Salin alamat Bedrock" [ref=f7e70] [cursor=pointer]:
+              - paragraph [ref=f7e71]: Bedrock
+              - paragraph [ref=f7e72]: play.satunusa.my.id:13378
+        - generic [ref=f7e74]:
+          - heading "Tentang SatuNusaMC" [level=2] [ref=f7e75]
+          - generic [ref=f7e76]:
+            - paragraph [ref=f7e77]: SatuNusaMC adalah server Minecraft Survival yang menghadirkan pengalaman bermain dengan berbagai fitur menarik, sistem ekonomi, eksplorasi, dan komunitas yang dapat berkembang bersama.
+            - paragraph [ref=f7e78]: Jelajahi dunia survival yang luas, bangun base impianmu, kumpulkan sumber daya, kembangkan kemampuan karakter, dan ciptakan perjalananmu sendiri bersama pemain lainnya.
+            - paragraph [ref=f7e79]: Tidak hanya sekadar bertahan hidup, SatuNusaMC menghadirkan berbagai aktivitas yang membuat setiap petualangan terasa lebih beragam. Mulai dari membangun perlindungan melalui sistem Land Claim, menjalankan berbagai pekerjaan untuk mendapatkan penghasilan, berdagang dengan pemain lain, hingga menyelesaikan quest dan bersaing di leaderboard. Baik kamu pemain yang suka membangun, menjelajah, bertarung, maupun mengembangkan ekonomi, selalu ada sesuatu untuk dilakukan di SatuNusaMC.
+        - generic [ref=f7e81]:
+          - generic [ref=f7e82]:
+            - generic [ref=f7e83]: SERVER TERBARU & MASIH FRESH!
+            - heading "SatuNusaMC — Semi Anarchy Economy" [level=2] [ref=f7e85]
+            - paragraph [ref=f7e86]: Bangun ekonomi, kumpulkan kekayaan, dan jadilah yang teratas!
+          - generic [ref=f7e87]:
+            - generic [ref=f7e88]: Shop System
+            - generic [ref=f7e90]: Gacha
+            - generic [ref=f7e92]: Leaderboard
+            - generic [ref=f7e94]: Custom World
+            - generic [ref=f7e96]: CoinFlip
+            - generic [ref=f7e98]: Battle Pass
+            - generic [ref=f7e100]: Daily Rewards
+            - generic [ref=f7e102]: Dan masih banyak lagi!
+        - generic [ref=f7e104]:
+          - generic [ref=f7e105]:
+            - heading "Galeri Server" [level=2] [ref=f7e106]
+            - paragraph [ref=f7e107]: Screenshot gameplay, build pemain, dan momen seru di SatuNusaMC.
+          - generic [ref=f7e108]:
+            - button "Perbesar gambar RTP Gate" [ref=f7e109]:
+              - img "RTP Gate" [ref=f7e110]
+              - generic [ref=f7e115]:
+                - heading "RTP Gate" [level=3] [ref=f7e116]
+                - paragraph [ref=f7e117]: Melampaui gerbang misterius RTP di tengah hujan
+            - button "Perbesar gambar Social Hub" [ref=f7e118]:
+              - img "Social Hub" [ref=f7e119]
+              - generic [ref=f7e124]:
+                - heading "Social Hub" [level=3] [ref=f7e125]
+                - paragraph [ref=f7e126]: Lobby/Hub
+            - button "Perbesar gambar Kingdom Hub" [ref=f7e127]:
+              - img "Kingdom Hub" [ref=f7e128]
+              - generic [ref=f7e133]:
+                - heading "Kingdom Hub" [level=3] [ref=f7e134]
+                - paragraph [ref=f7e135]: Pusat komunitas dan toko di server
+            - button "Perbesar gambar Sunset Plaza" [ref=f7e136]:
+              - img "Sunset Plaza" [ref=f7e137]
+              - generic [ref=f7e142]:
+                - heading "Sunset Plaza" [level=3] [ref=f7e143]
+                - paragraph [ref=f7e144]: Lapangan golden hour di spawn server
+            - button "Perbesar gambar nomor 5" [ref=f7e145]:
+              - generic [ref=f7e150]:
+                - heading [level=3]
+                - paragraph
+            - button "Perbesar gambar nomor 6" [ref=f7e151]:
+              - generic [ref=f7e156]:
+                - heading [level=3]
+                - paragraph
+            - button "Perbesar gambar nomor 7" [ref=f7e157]:
+              - generic [ref=f7e162]:
+                - heading [level=3]
+                - paragraph
+            - button "Perbesar gambar nomor 8" [ref=f7e163]:
+              - generic [ref=f7e168]:
+                - heading [level=3]
+                - paragraph
+            - button "Perbesar gambar RULES MENU" [ref=f7e169]:
+              - img "RULES MENU" [ref=f7e170]
+              - generic [ref=f7e175]:
+                - heading "RULES MENU" [level=3] [ref=f7e176]
+                - paragraph
+            - button "Perbesar gambar KEY CRATES" [ref=f7e177]:
+              - img "KEY CRATES" [ref=f7e178]
+              - generic [ref=f7e183]:
+                - heading "KEY CRATES" [level=3] [ref=f7e184]
+                - paragraph
+            - button "Perbesar gambar TUTORIAL MENU" [ref=f7e185]:
+              - img "TUTORIAL MENU" [ref=f7e186]
+              - generic [ref=f7e191]:
+                - heading "TUTORIAL MENU" [level=3] [ref=f7e192]
+                - paragraph
+            - button "Perbesar gambar LOBBY" [ref=f7e193]:
+              - img "LOBBY" [ref=f7e194]
+              - generic [ref=f7e199]:
+                - heading "LOBBY" [level=3] [ref=f7e200]
+                - paragraph
+            - button "Perbesar gambar BATTLE PASS" [ref=f7e201]:
+              - img "BATTLE PASS" [ref=f7e202]
+              - generic [ref=f7e207]:
+                - heading "BATTLE PASS" [level=3] [ref=f7e208]
+                - paragraph
+            - button "Perbesar gambar COIN FLIP" [ref=f7e209]:
+              - img "COIN FLIP" [ref=f7e210]
+              - generic [ref=f7e215]:
+                - heading "COIN FLIP" [level=3] [ref=f7e216]
+                - paragraph
+            - button "Perbesar gambar TEAM MENU" [ref=f7e217]:
+              - img "TEAM MENU" [ref=f7e218]
+              - generic [ref=f7e223]:
+                - heading "TEAM MENU" [level=3] [ref=f7e224]
+                - paragraph
+        - generic [ref=f7e225]:
+          - generic [ref=f7e226]:
+            - paragraph [ref=f7e227]: FITUR
+            - heading "Fitur Utama" [level=2] [ref=f7e228]
+            - paragraph [ref=f7e229]: Sistem dan fitur inti yang membuat pengalaman bermain di SatuNusaMC menjadi unik.
+          - generic [ref=f7e230]:
+            - generic [ref=f7e231]:
+              - heading "Survival Experience" [level=3] [ref=f7e233]
+              - paragraph [ref=f7e234]: Nikmati dunia Survival dengan kebebasan membangun base, membuat farm, mengumpulkan sumber daya, dan menjelajahi lingkungan bersama pemain lain.
+            - generic [ref=f7e235]:
+              - heading "Land Claim Protection" [level=3] [ref=f7e237]
+              - paragraph [ref=f7e238]: Lindungi hasil kerja kerasmu menggunakan sistem Land Claim. Gunakan Golden Shovel untuk menentukan wilayah perlindungan agar bangunan dan area milikmu lebih aman dari griefing.
+            - generic [ref=f7e239]:
+              - heading "Economy System" [level=3] [ref=f7e241]
+              - paragraph [ref=f7e242]: Bangun kekayaan melalui aktivitas bermain. Kumpulkan uang, jual hasil eksplorasi, beli kebutuhan, dan kembangkan asetmu melalui sistem ekonomi server.
+            - generic [ref=f7e243]:
+              - heading "Jobs System" [level=3] [ref=f7e245]
+              - paragraph [ref=f7e246]: Pilih pekerjaan sesuai gaya bermainmu. Mulai dari penambang, petani, penebang kayu, pemburu, nelayan, hingga berbagai pekerjaan lainnya untuk mendapatkan penghasilan.
+        - generic [ref=f7e247]:
+          - generic [ref=f7e248]:
+            - paragraph [ref=f7e249]: SISTEM
+            - heading "Sistem Gameplay" [level=2] [ref=f7e250]
+            - paragraph [ref=f7e251]: Berbagai sistem pendukung yang memperkaya pengalaman Survival di server.
+          - generic [ref=f7e252]:
+            - generic [ref=f7e255]:
+              - heading "Player Market" [level=3] [ref=f7e256]
+              - paragraph [ref=f7e257]: Berinteraksi dengan ekonomi antarpemain melalui sistem perdagangan.
+            - generic [ref=f7e260]:
+              - heading "Skills & Progression" [level=3] [ref=f7e261]
+              - paragraph [ref=f7e262]: "Tingkatkan kemampuan karakter melalui berbagai kategori skill: Combat, Defense, Agility, Fishing, Excavation, Enchanting, Mining, Foraging, Alchemy, dan Farming."
+            - generic [ref=f7e265]:
+              - heading "Daily Rewards" [level=3] [ref=f7e266]
+              - paragraph [ref=f7e267]: Dapatkan kesempatan memperoleh hadiah melalui sistem Daily Rewards. Kunjungi server secara rutin dan klaim hadiah yang tersedia.
+            - generic [ref=f7e270]:
+              - heading "Quest System" [level=3] [ref=f7e271]
+              - paragraph [ref=f7e272]: Selesaikan berbagai quest untuk memberikan tujuan tambahan dalam perjalanan Survival-mu.
+            - generic [ref=f7e275]:
+              - heading "Battle Pass" [level=3] [ref=f7e276]
+              - paragraph [ref=f7e277]: Nikmati sistem progres tambahan melalui Battle Pass dan raih berbagai reward sesuai perkembangan permainan.
+            - generic [ref=f7e280]:
+              - heading "Custom Kits" [level=3] [ref=f7e281]
+              - paragraph [ref=f7e282]: Pilih kit sesuai rank yang dimiliki. Setiap kit memberikan perlengkapan awal untuk membantu memulai petualangan.
+            - generic [ref=f7e285]:
+              - heading "Crate & Key System" [level=3] [ref=f7e286]
+              - paragraph [ref=f7e287]: Kunjungi area Gacha untuk mencoba mendapatkan berbagai hadiah melalui sistem crate dan key yang tersedia.
+            - generic [ref=f7e290]:
+              - heading "Leaderboard" [level=3] [ref=f7e291]
+              - paragraph [ref=f7e292]: Bersaing dengan pemain lain dalam berbagai kategori seperti Top Deaths, Top Balance, Top Kills, dan Top Playtime.
+            - generic [ref=f7e295]:
+              - heading "Player Vault" [level=3] [ref=f7e296]
+              - paragraph [ref=f7e297]: Simpan barang-barang berhargamu melalui sistem Player Vault untuk membantu pengelolaan inventaris.
+            - generic [ref=f7e300]:
+              - heading "Random Teleport" [level=3] [ref=f7e301]
+              - paragraph [ref=f7e302]: Jelajahi dunia Survival dengan lebih mudah menggunakan fitur Random Teleport untuk menemukan lokasi baru dan memulai petualangan.
+            - generic [ref=f7e305]:
+              - heading "Mob Level System" [level=3] [ref=f7e306]
+              - paragraph [ref=f7e307]: Hadapi berbagai monster dengan level berbeda dan kumpulkan pengalaman selama menjelajahi dunia Survival.
+            - generic [ref=f7e310]:
+              - heading "Player & Community Activities" [level=3] [ref=f7e311]
+              - paragraph [ref=f7e312]: Nikmati berbagai fasilitas tambahan, termasuk tutorial, informasi server, rules, serta sistem pendukung aktivitas pemain.
+        - generic [ref=f7e313]:
+          - generic [ref=f7e314]:
+            - paragraph [ref=f7e315]: RANK
+            - heading "Rank & Keuntungan" [level=2] [ref=f7e316]
+            - paragraph [ref=f7e317]: Tingkatkan pengalaman bermainmu dengan pilihan rank yang tersedia di SatuNusaMC.
+          - generic [ref=f7e318]:
+            - generic [ref=f7e319]:
+              - heading "ROOKIE" [level=3] [ref=f7e320]
+              - paragraph [ref=f7e321]: Mulai perjalananmu dengan perlengkapan tambahan untuk Survival.
+            - generic [ref=f7e322]:
+              - heading "KNIGHT" [level=3] [ref=f7e323]
+              - paragraph [ref=f7e324]: Tingkatkan perjalananmu dengan akses ke kit rank Knight.
+            - generic [ref=f7e325]:
+              - heading "LORD" [level=3] [ref=f7e326]
+              - paragraph [ref=f7e327]: Kit rank Lord dan keuntungan lebih besar untuk pemain aktif.
+            - generic [ref=f7e328]:
+              - heading "ETERNAL" [level=3] [ref=f7e329]
+              - paragraph [ref=f7e330]: Untuk pemain yang ingin keuntungan eksklusif dan prioritas penuh.
+          - link "Lihat Detail Rank" [ref=f7e332] [cursor=pointer]:
+            - /url: /store
+        - generic [ref=f7e335]:
+          - heading "Bergabunglah dengan Komunitas Kami" [level=2] [ref=f7e336]
+          - paragraph [ref=f7e337]: Bergabunglah dengan WhatsApp grup SatuNusaMC untuk berita terbaru, event, dan diskusi dengan pemain lainnya.
+          - generic [ref=f7e338]:
+            - link "Join WhatsApp" [ref=f7e339] [cursor=pointer]:
+              - /url: https://chat.whatsapp.com/LNYqUv2iL9xDCXLbOEXdXh
+            - link "Gabung Discord" [ref=f7e341] [cursor=pointer]:
+              - /url: https://discord.gg/cc6qUm2C44
+            - link "WhatsApp Admin" [ref=f7e344] [cursor=pointer]:
+              - /url: https://wa.me/6285333181671
+        - generic [ref=f7e346]:
+          - generic [ref=f7e347]:
+            - paragraph [ref=f7e348]: BERITA
+            - heading "Berita Terbaru" [level=2] [ref=f7e349]
+            - paragraph [ref=f7e350]: Update terbaru, informasi event, dan catatan patch server.
+          - generic [ref=f7e351]:
+            - generic [ref=f7e352]:
+              - 'heading "Maintenance: Migrasi Hosting" [level=3] [ref=f7e353]'
+              - paragraph [ref=f7e354]: Server sedang menjalani migrasi hosting. Mohon tunggu — perkembangan terbaru diumumkan di grup.
+              - text: 6 November 2026
+            - generic [ref=f7e355]:
+              - 'heading "Fix Bug Bedrock: Kini Bisa Join Lagi!" [level=3] [ref=f7e356]'
+              - paragraph [ref=f7e357]: Bedrock kini sudah bisa join kembali seperti biasa. Mohon maaf atas ketidaknyamanannya.
+              - text: 31 Oktober 2026
+            - generic [ref=f7e358]:
+              - heading "IP Baru Sementara untuk Player Bedrock" [level=3] [ref=f7e359]
+              - paragraph [ref=f7e360]: "Untuk sementara, player Bedrock login pakai IP berikut: lovelace.nexuscloud.id Port 13378."
+              - text: 31 Oktober 2026
+    - contentinfo [ref=f7e361]:
+      - generic [ref=f7e362]:
+        - generic [ref=f7e363]:
+          - generic [ref=f7e364]:
+            - img "SatuNusaMC Logo" [ref=f7e365]
+            - generic [ref=f7e366]: SatuNusaMC
+          - paragraph [ref=f7e367]: Server Minecraft Indonesia yang minimalis, stabil, dan ramah komunitas. Main bareng, bangun bareng, tumbuh bareng.
+        - generic [ref=f7e368]:
+          - heading "Navigasi" [level=4] [ref=f7e369]
+          - list [ref=f7e370]:
+            - listitem [ref=f7e371]:
+              - link "Home" [ref=f7e372] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f7e373]:
+              - link "Store" [ref=f7e374] [cursor=pointer]:
+                - /url: /store
+            - listitem [ref=f7e375]:
+              - link "Vote" [ref=f7e376] [cursor=pointer]:
+                - /url: /vote
+            - listitem [ref=f7e377]:
+              - link "Donatur" [ref=f7e378] [cursor=pointer]:
+                - /url: /donatur
+            - listitem [ref=f7e379]:
+              - link "Rules" [ref=f7e380] [cursor=pointer]:
+                - /url: /rules
+            - listitem [ref=f7e381]:
+              - link "News" [ref=f7e382] [cursor=pointer]:
+                - /url: /news
+            - listitem [ref=f7e383]:
+              - link "Staff" [ref=f7e384] [cursor=pointer]:
+                - /url: /staff
+            - listitem [ref=f7e385]:
+              - link "Support" [ref=f7e386] [cursor=pointer]:
+                - /url: /support
+            - listitem [ref=f7e387]:
+              - link "Wiki" [ref=f7e388] [cursor=pointer]:
+                - /url: /wiki
+        - generic [ref=f7e389]:
+          - heading "Hubungi Kami" [level=4] [ref=f7e390]
+          - paragraph [ref=f7e391]: "Email: support@satunusamc.id"
+          - paragraph [ref=f7e392]:
+            - text: "WhatsApp:"
+            - link "SatuNusaMC" [ref=f7e393] [cursor=pointer]:
+              - /url: https://chat.whatsapp.com/LNYqUv2iL9xDCXLbOEXdXh
+          - link "Discord" [ref=f7e394] [cursor=pointer]:
+            - /url: https://discord.gg/cc6qUm2C44
+      - generic [ref=f7e397]: © 2026 SatuNusaMC. Seluruh hak dilindungi.

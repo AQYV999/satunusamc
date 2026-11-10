@@ -39,7 +39,6 @@ export function HeroVideo() {
       className="absolute inset-0 w-full h-full object-cover"
     >
       <source src="/hero.webm" type="video/webm" />
-      <source src="/hero.mp4" type="video/mp4" />
     </video>
   );
 }

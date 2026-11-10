@@ -13,7 +13,7 @@ export default async function handler(req: any, res: any) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Content-Type', 'text/csv');
     res.status(200).send(text);
-  } catch (error) {
+  } catch {
     res.status(500).json({ error: 'Gagal mengambil data dari Google Sheet' });
   }
 }

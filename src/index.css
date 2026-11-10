@@ -115,6 +115,10 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 10px 36px rgba(218, 173, 70, 0.55);
 }
+.btn-primary:focus-visible {
+  outline: 2px solid #DAAD46;
+  outline-offset: 2px;
+}
 
 .btn-secondary {
   background: rgba(218, 173, 70, 0.06);

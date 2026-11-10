@@ -84,11 +84,11 @@ export function Home() {
                       href={SITE.discordInvite}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-discord-outline inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold"
+                      className="btn-discord-outline inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold w-full sm:w-auto"
                     >
                       <DiscordIcon className="h-5 w-5" /> Gabung Discord
                     </a>
-                    <CopyButton label="Salin IP" />
+                    <CopyButton label="Salin IP" className="w-full sm:w-auto" />
                   </div>
 
                   {/* IP Info - compact, aligned with buttons above */}
